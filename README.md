@@ -24,7 +24,7 @@ Use it as a base image for your needs and add a caddyfile to it : you can put a 
 Don't forget to expose the required ports !
 
 ### Example
-Take a look at the `sample.Dockerfile` in the `example` folder.   
+Take a look at the `example.Dockerfile` in the `example` folder.   
 
 ### General Usage
 
