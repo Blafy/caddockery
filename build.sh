@@ -1,9 +1,13 @@
 #!/bin/sh
 
-export GO111MODULE=on
+if [ $1 ]
+    then CADDY_VER=$1
+    else CADDY_VER="1.0.3"
+fi
 
-CADDY_VER="1.0.3"
 CUR_PATH=$(pwd)
+
+export GO111MODULE=on
 
 go get github.com/caddyserver/caddy/
 

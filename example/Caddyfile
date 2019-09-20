@@ -1,4 +1,6 @@
 :8000 { #replace with your domain name to enable TLS
     root /html
     header / -Server  #to remove Caddy header
+    log / stdout
+    #log logs.txt
 }

@@ -1,4 +1,4 @@
-FROM caddockery
+FROM blafy/caddockery
 
 ###### PREPARING FILES ######
 #You can copy your files here, or mount the folder to the host
