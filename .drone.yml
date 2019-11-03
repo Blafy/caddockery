@@ -11,7 +11,7 @@ steps:
   image: plugins/docker
   settings:
     repo: blafy/caddockery
-    auto_tag: true
+    tags: latest-amd64
     username: blafy
     password:
         from_secret: dockerpwd
@@ -29,7 +29,7 @@ steps:
   image: plugins/docker
   settings:
     repo: blafy/caddockery
-    auto_tag: true
+    tags: latest-arm64
     username: blafy
     password:
         from_secret: dockerpwd
