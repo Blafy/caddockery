@@ -1,4 +1,4 @@
-![Docker Build Status](https://img.shields.io/docker/cloud/build/blafy/caddockery)
+[![Build Status](https://build.albanboye.info/api/badges/Alban/caddockery/status.svg)](https://build.albanboye.info/Alban/caddockery)
 
 
  ## **Caddockery**
