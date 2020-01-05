@@ -9,7 +9,7 @@ CUR_PATH=$(pwd)
 
 export GO111MODULE=on
 
-go get github.com/caddyserver/caddy/
+go get github.com/caddyserver/caddy@v$CADDY_VER
 
 cd $GOPATH/pkg/mod/github.com/caddyserver/caddy@v$CADDY_VER
 
