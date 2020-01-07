@@ -50,6 +50,7 @@ steps:
     password:
         from_secret: dockerpwd
   commands:
+  - export DOCKER_CLI_EXPERIMENTAL=enabled
   - docker manifest create blafy/caddockery:latest blafy/caddockery:latest-arm64 blafy/caddockery:latest-amd64
   - docker manifest push blafy/caddockery:latest
   
