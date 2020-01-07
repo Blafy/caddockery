@@ -34,6 +34,15 @@ steps:
     password:
         from_secret: dockerpwd
         
+---
+kind: pipeline
+type: docker
+name: manifest
+
+platform:
+  arch: arm64
+
+steps:
 - name: manifest
   image: plugins/docker
   settings:
@@ -43,3 +52,7 @@ steps:
   commands:
   - docker manifest create blafy/caddockery:latest blafy/caddockery:latest-arm64 blafy/caddockery:latest-amd64
   - docker manifest push blafy/caddockery:latest
+  
+depends_on:
+- x86
+- arm8
