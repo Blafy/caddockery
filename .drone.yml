@@ -46,11 +46,12 @@ steps:
 - name: manifest
   image: plugins/docker
   settings:
-    username: blafy
-    password:
-        from_secret: dockerpwd
+  environment:
+    DOCKER_PASSWORD: 
+      from_secret: dockerpwd 
   commands:
   - export DOCKER_CLI_EXPERIMENTAL=enabled
+  - echo $DOCKER_PASSWORD | docker login -u blafy --password-stdin
   - docker manifest create blafy/caddockery:latest blafy/caddockery:latest-arm64 blafy/caddockery:latest-amd64
   - docker manifest push blafy/caddockery:latest
   
