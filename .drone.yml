@@ -33,3 +33,13 @@ steps:
     username: blafy
     password:
         from_secret: dockerpwd
+        
+- name: manifest
+  image: plugins/docker
+  settings:
+    username: blafy
+    password:
+        from_secret: dockerpwd
+  commands:
+  - docker manifest create blafy/caddockery:latest blafy/caddockery:latest-arm64 blafy/caddockery:latest-amd64
+  - docker manifest push blafy/caddockery:latest
