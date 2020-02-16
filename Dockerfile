@@ -10,7 +10,7 @@ RUN chmod +x build.sh && ./build.sh
 
 ##### Binary only image ######
 
-FROM scratch
+FROM gcr.io/distroless/static
 
 COPY --from=0 /go/caddockery /
 

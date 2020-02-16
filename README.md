@@ -9,7 +9,7 @@ This way, you can obtain a clean and free build of the server (unlike the non-fr
 The binary provided is also statically linked, making deployment easy !
 
 Current version supported :
-`v1.03`
+`v1.04`
 
 ### Build it yourself :
 
@@ -37,6 +37,9 @@ Open [localhost:8000](localhost:8000) in your browser to see if everything is wo
 When using TLS, caddy stores the certificates in `.caddy`.
 It is recommended to save certificates on the host machine to prevent regeneration every time container starts.   
 Mount a volume with `-v $HOME/.caddy:/.caddy` for example.
+
+### Mount a host folder
+You might want to use a folder on your host to serve your files from, in order to do that just add `-v folderToMount:/html`
 
 
 ### General Usage
