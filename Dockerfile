@@ -10,7 +10,7 @@ RUN chmod +x build.sh && ./build.sh
 
 ##### Binary only image ######
 
-FROM discolix/static #gcr.io/distroless/static
+FROM discolix/static
 
 COPY --from=0 /go/caddockery /
 
